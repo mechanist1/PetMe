@@ -1,0 +1,85 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+
+
+
+
+
+
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  
+
+  <title>Aboutus</title>
+
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='aboutus/css/bootstrap.css') }}" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static',filename='aboutus/css/style.css') }}" rel="stylesheet" />
+ 
+
+
+
+
+ 
+
+
+</head>
+<pre>
+
+</pre>
+
+      <div class="hero_section-container ">
+
+        <div class="hero_img-box">
+          <img class="us" src="{{ url_for('static',filename='aboutus/images/t.jpg') }}" alt="" width="500  ">
+        </div>
+        <div class="hero_detail-box">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="hero_detail-container">
+                  <h1>
+                   This project was realised by: 
+                   <div class="titre"> Abderrahmen Othman  <br></div>
+                   <div class="titre1"> & Ilyess Mlaouhi </div>
+                  </h1>
+                  <p class="us">
+                    <div class="first">We are a team of two software engineering students who are enthusiastic towards technologie and computers.<br><hr>
+                    this is our first project together.<br>
+                    being passionate about what we do is something that we take very seriously,<br>
+                    So we hope that our hard work and sleepless nights is to your liking.<br><hr>
+                    we look forward to more projects and we hope this is nothing but a step towards being better engineers.</div>
+                  
+                  </p>
+                  <p>
+                    <pre>
+
+                    </pre>
+                  <div class="d-flex justify-content-center justify-content-sm-start">
+                    <a href="/" class="call_to-btn ">
+                      <span>
+                        Check the home page
+                      </span>
+                     
+                    
+                    </a>
+                  </p>
+                  </div>
+                </div>
+              </div>
+              
+                 
+
+{% endblock %}

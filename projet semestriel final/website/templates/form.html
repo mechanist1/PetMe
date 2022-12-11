@@ -1,0 +1,89 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+    content %}
+    
+    <body>
+    
+        <!-- Main css -->
+        <link rel="stylesheet" href="{{ url_for('static',filename='/form/css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='/Flask-Web-App-Tutorial-main/website/static/signup/fonts/material-icon/css/material-design-iconic-font.css') }}">
+        <pre>
+
+
+
+
+
+        </pre>
+        
+
+    <section class="signup">
+        <h2 class="form1"><span class="your">Your</span><span class="post"> Post</span></h2>
+
+      <div class="container" >
+          <div class="signup-content">
+              <div class="signup-form">
+                  <h2 class="form-title">Register </h2>
+                  <form method="POST" class="register-form" id="register-form" enctype="multipart/form-data">                   
+                      <div class="form-group">
+                          <label for="namepet"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                          <input type="text" name="namepet" id="namepet" placeholder="Pet's name"/>
+                      </div>
+                      <div class="form-group">
+                        <label for="Gender"><i class="zmdi zmdi-email"></i></label>
+                        <input type="text" name="Gender" id="Gender" placeholder="Sex"/></div>
+                      
+                      <div class="form-group">
+                          <label for="favmeal"><i class="zmdi zmdi-lock"></i></label>
+                          <input type="text" name="favmeal" id="favmeal" placeholder="Your Pet's favorite meal"/>
+                      </div>
+                      <div class="form-group">
+                          <label for="Medic"><i class="zmdi zmdi-lock-outline"></i></label>
+                          <input type="textarea" name="Medic" id="Medic" placeholder="Info about your pet"/>
+                      </div>
+                      <div class="form-group">
+                        <label for="Contact"><i class="zmdi zmdi-lock"></i></label>
+                        <input type="tel" name="Contact" id="Contact" placeholder="Your phone number"/>
+                    </div>
+                        
+                      <div class="form-group form-button">
+                          <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/> 
+                          
+                      </div>
+                      
+                  
+              </div>
+              <div class="upload-box">
+                <div class="upload-img">
+                    <img src="images/upload.svg" alt="">
+                </div>
+                
+                    
+                <label for="upload-input" class="upload-label"><img src="    {{ url_for('static',filename='/images/upload.png') }} "></label>
+
+                <input type="file"   name="file" id="upload-input" accept="images/*" >
+                
+                </form>
+            </div>
+        
+            <script >
+                const uploadInput = document.querySelector('#upload-input') ;
+                const previewImg = document.querySelector('.upload-img img') ;
+
+                uploadInput.addEventListener('change',e => {
+                if(e.target.files.length > 0) {
+                const url = URL.createObjectURL(e.target.files[0]) ;
+                 previewImg.src = url ;
+                    }
+                    })
+            </script>
+              
+          </div>
+      </div>
+    
+      
+      <script src="/Flask-Web-App-Tutorial-main/website/static/signup/vendor/jquery/jquery.min.js"></script>
+    <script src="/Flask-Web-App-Tutorial-main/website/static/signup/js/main.js"></script>
+    </section>
+    </body>
+    
+    
+    {% endblock %}

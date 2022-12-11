@@ -1,0 +1,84 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PetMe</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='Home index/fontawesomeindex/css/all.min.css') }}"> 
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+    <link href="{{ url_for('static',filename='Home index/cssindex/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='Home index/cssindex/templatemo-xtra-blog.css') }}" rel="stylesheet"> 
+	<link rel="icon" href="{{ url_for('static',filename='Home index/images/logo.png') }}"> 
+
+  
+
+
+
+
+
+
+
+
+
+
+                <img class="tips" src="{{ url_for('static',filename='/home index/imgindex/e5er taswira.png') }}" alt="sing up image">
+
+    
+
+</head>
+{% for pos in posts %}
+    <div class="container-fluid">
+        <main class="tm-main">
+            <!-- Search form -->
+
+            
+                                                   <!-- this is the first pic-->
+                <article class="col-12 col-md-8 tm-post">
+                    <hr class="tm-hr-primary">
+                    <a class="effect-lily tm-post-link tm-pt-60">
+                
+                        <div class="tm-post-link-inner">
+                              <img  src="http://127.0.0.1:5000/{{ pos.id }}" >  
+                                                  
+                        </div>
+                        
+                        
+                                          <!-- this is the text conaitaing the information about the pic-->
+                    </a>                    
+                    <p class="tm-pt-30">
+                         Name : {{ pos.namepet }} </br>
+                         Sex : {{ pos.favmeal }} </br>
+                         favorite meal : {{ pos.Medic }} </br>
+                         info about  pet : {{ pos.Gender }} </br>
+                         phone number : {{ pos.Contact }} </br>
+                         
+                    </p>
+                    
+                    
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <span>post date:</span>
+                        <span>{{ pos.date.strftime('%Y-%m-%d , %H:%M:%S') }}<!--this is a variable abt the time of the post--></span>
+                    </div>
+                </article>
+
+        </main>
+    </div>
+
+    {% endfor %}    
+   {% endblock %} 
+
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+               
+
