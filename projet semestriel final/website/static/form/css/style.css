@@ -334,10 +334,12 @@ figure {
   text-transform: uppercase;
   color: #fff;
   border-radius: 15px;
-  position:sticky;
+  position:absolute;
   width: 60px;
-  bottom: 100px;
-  left: 63%;
+  left: 91em;
+      
+  
+  
   transform: translateX(-50%);
   cursor: pointer;
   

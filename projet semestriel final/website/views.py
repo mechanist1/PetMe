@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, jsonify
+from flask import Blueprint, render_template, request
 from flask_login import login_required, current_user
 from .models import Form,User
 from sqlalchemy import desc
